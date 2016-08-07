@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVA - Student Registration</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css"/>
+<link href="layout/styleform.css" rel="stylesheet">
+<script>
+function validateemail()
+{
+	var emailid=document.srform.email.value;
+	atpos = emailid.indexOf("@");
+ 	dotpos = emailid.lastIndexOf(".");
+ 	if (atpos < 1|| dotpos<atpos+2)
+ 	{
+	 	alert("Please enter correct email id");
+                  	 document.srform.email.focus();
+ 	 	return false;
+ 	}
+	return true;
+
+}
+function validatepwd()
+{
+	var p1=document.srform.password.value;
+	var p2=document.srform.cpassword.value;
+	if(p1=="")
+	{
+		alert("Please enter your password");
+		document.srform.password.focus();
+		return false;
+	}
+	if(p2=="")
+	{
+		alert("Please re-enter your password");
+	        document.srform.cpassword.focus();
+		return false;
+	}		
+	if(document.srform.rno.value==p1)
+	{
+		alert("Your register number and password is same.Please enter another password");
+		document.srform.password.focus();
+		return false;
+	}
+	re=/[0-9]/;
+	if(!re.test(p1))
+	{
+		alert("Please enter a password which contain atleast one number character");
+		document.srform.password.focus();	
+		return false;
+	}
+	re=/[A-Z]/;
+	if(!re.test(p1))
+	{
+		alert("Please enter a password which contain atleast one uppercase character");
+		document.srform.password.focus();	
+		return false;
+	}
+	if(p1<6)
+	{
+		alert("Please enter a password which contain minimum 6 character");
+		document.srform.password.focus();
+		return false;
+	}
+	if(p1!=p2)
+	{
+		alert("Your password and confirm password didn't match.Please re-enter you confirm password");
+		document.srform.cpassword.focus();
+		return false;
+	}
+	return true;
+}
+function validate()
+{
+	if(document.srform.name.value=="")
+	{
+		alert("Please enter your name!");
+		document.srform.name.focus();
+		return false;
+	}
+	if(document.srform.dob.value=="")
+	{
+		alert("Please enter your date of birth!");
+		document.srform.dob.focus();
+		return false;
+	}
+	if(document.srform.age.value=="")
+	{
+		alert("Please enter your age!");
+		document.srform.age.focus();
+		return false;
+	}	
+	if(document.srform.dep.value=="-1")
+	{
+		alert("Please select your department!");
+		document.srform.dep.focus();
+		return false;
+	}	
+	if(document.srform.address.value=="")
+	{
+		alert("Please enter your address!");
+		document.srform.address.focus();
+		return false;
+	}
+	if(document.srform.email.value=="")
+	{
+		alert("Please enter your email id!");
+		document.srform.email.focus();
+		return false;
+	}
+	else
+	{
+		var result=validateemail();
+		if(result==false)
+		{
+			return false;
+		}
+	}	
+	if(document.srform.pnum.value==""||document.srform.pnum.value.length!=10)
+	{
+		alert("Please enter a valid phone number!");
+		document.srform.pnum.focus();
+		return false;
+	}	
+	if(document.srform.rno.value=="")
+	{
+		alert("Please enter your username!");
+		document.srform.rno.focus();
+		return false;
+	}
+	else
+	{
+		var result=validatepwd();
+		if(result==false)
+		{
+			return false;
+		}
+	}
+	return(true);
+	alert("Values are successfully filled");
+}
+</script>
+</head>
+<body>
+<div class="wrapper col0">
+ <div id="topbar">      
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Counselling Code&raquo; 1215</li>
+        </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><img src="../images/demo/21.jpg" style="height:70px">SVA College of Engineering</h1>
+      <p>- a Temple of Wisdom</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li>
+	 <form action="#" method="post" id="sitesearch">
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" src="../layout/search.gif" id="search" alt="Search" height="15px"/>
+      </form> </li>
+      </ul>
+      <p>Tel: 044-22239786 | Mail: svacoe@edu.com</p>
+	<p>Fax:04-3425617</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="topnav">
+    <ul>
+      <li><a href="../index.html">Home</a>
+        </li>
+      <li><a href="About-welcome.html">About Us</a>
+        </li>
+      <li><a href="Departments-it.html">Departments</a>
+        </li>
+      <li class="active"><a href="academic-co.html">Academic</a>
+	<ul>
+	<li><a href="academic-stud.html">Student Registration</a></li>
+	<li><a href="academic-login.html">Login</a></li>
+	<li><a href="academic-co.html">Co-curricular activities</li>
+	</ul>
+       </li>
+      <li class="last"><a href="placement.html">Placements</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper col3">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="#">Home</a></li>
+      <li>&#187;</li>
+      <li><a href="#">Academic</a></li>
+	<li>&#187;</li>
+      <a href="#">Student_Registration</a>
+      </ul>
+  </div>
+</div>
+<div id="comments">
+<h2>Student Form Registration</h2>
+<div id="respond">
+<form style="background-color:#F8F7DF" name="srform" onsubmit="return(validate());"  action="../layout/scripts/form.php" method="POST">
+	<div>Name:</div>
+		<div><input type="text" name="name"></div><br><br>
+	<div>Date of birth:</div>
+		<div><input type="date" name="dob"></div><br><br>
+	<div>Age:</div>
+		<div><input type="number" name="age"></div><br><br>
+	<div>Sex:</div>
+		<div><label >Male<input type="radio"  name="gender" value="male" ></div>
+	    	<div><label>Female<input type="radio" name="gender" value="female"></div>
+	    	<div><label>Others<input type="radio" name="gender" value="others"></div><br><br>
+	<div>Department:</div>
+		<div><select name="dep">
+			<option value="-1">Select Department</option>
+			<option value="Mechanical">Mechanical</option>
+			<option value="ECE">ECE</option>
+			<option value="Civil">Civil</option>	
+			<option value="Csc">Csc</option>
+			<option value="IT">IT</option>
+		</select></div><br><br>
+	<div>Address:</div>
+		<div><input type="text" name="address" style="width:400px"></div><br><br>
+	<div>Email Id:</div>
+		<div><input type="email" name="email"></div><br><br>
+	<div>Phone Number:</div>
+		<div><input type="tel" name="pnum"></div><br><br>
+	<div>Register number:</div>
+		<div><input type="number" name="rno"></div><br><br>
+	<div>Password:</div>
+		<div><input type="password" name="password"></div><br><br>
+	<div>Confirm Password:</div>
+		<div><input type="password" name="cpassword"></div><br><br>
+	<center>
+		<input type="submit" value="submit">
+		<input type="reset" value="reset">
+	</center>
+</form>
+</div>
+</div>
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+       <div class="footbox">
+      <h2>Connect With Us</h2>
+	with any of this following social media..
+<a href="https://www.facebook.com/login"><img src="../images/demo/facebook.gif" alt="" /></a>
+<a href="https://twitter.com/login"><img src="../images/demo/twitter.gif" alt="" /></a>
+<a href="https://www.flickr.com/login"><img src="../images/demo/flickr.gif" alt="" /> </a>
+<a href="https://www.youtube.com/channel/UCRNeXX-0F9hTpLXGRkWeJbw"><img src="../images/demo/youtube.gif" alt="" /></a>
+<a href="https://www.rss.com/login"><img src="../images/demo/rss.gif" alt="" /></a>
+    </div>
+    <div class="footbox">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="../index.html">&raquo;Home page</a></li>
+        <li><a href="pages/academic-stud.html">&raquo;Student Registration</a></li>
+        <li><a href="pages/library.html">&raquo;Library</a></li>
+        <li><a href="pages/placement.html">&raquo;Placement</a></li>
+        <li class="last"><a href="pages/contact.html">&raquo;Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Locations of our college</h2>
+      <ul>
+        <li>Kaatankulathur</a></li>
+        <li>Kanyakumari</a></li>
+        <li>Trichy</a></li>
+        <li>Vadapalani</a></li>
+        <li class="last"><a href="#">Salem</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">SVA College of Engineering</a></p>
+    <p class="fl_right">By webteam of SVA College</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

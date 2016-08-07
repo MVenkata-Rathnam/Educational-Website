@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVA - Account Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css"/>
+<script>
+function validatepwd()
+{
+	var p1=document.srform.studpass.value;
+	if(p1=="")
+	{
+		alert("Please enter your password");
+		document.srform.studpass.focus();
+		return false;
+	}
+	if(document.srform.regno.value==p1)
+	{
+		alert("Your Password is wrong!");
+		document.srform.regno.focus();
+		return false;
+	}
+	re=/[0-9]/;
+	if(!re.test(p1))
+	{
+		alert("Your password is wrong!");
+		document.srform.studpass.focus();	
+		return false;
+	}
+	re=/[A-Z]/;
+	if(!re.test(p1))
+	{
+		alert("Your password is wrong!");
+		document.srform.studpass.focus();	
+		return false;
+	}
+	if(p1<6)
+	{
+		alert("Your password is wrong");
+		document.srform.studpass.focus();
+		return false;
+	}
+}
+function validate()
+{
+	if(document.srform.regno.value=="")
+	{
+		alert("Please enter your register number!");
+		document.srform.regno.focus();
+		return false;
+	}
+	else
+	{
+		var result=validatepwd();
+		if(result==false)
+		{
+			return false;
+		}
+	}
+	return(true);
+}
+</script>
+</head>
+<body>
+<div class="wrapper col0">
+ <div id="topbar">      
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Counselling Code&raquo; 1215</li>
+        </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><img src="../images/demo/21.jpg" style="height:70px">SVA College of Engineering</h1>
+      <p>- a Temple of Wisdom</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li>
+	 <form action="#" method="post" id="sitesearch">
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" src="../layout/search.gif" id="search" alt="Search" height="15px"/>
+      </form> </li>
+      </ul>
+      <p>Tel: 044-22239786 | Mail: svacoe@edu.com</p>
+	<p>Fax:04-3425617</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="topnav">
+         <ul>
+      <li><a href="../index.html">Home</a>
+      </li>
+      <li><a href="About-welcome.html">About Us</a>
+        </li>
+      <li><a href="Departments-it.html">Departments</a >
+        </li>
+      <li class="active"><a href="academic-co.html">Academic</a>
+    <ul>
+	<li><a href="academic-stud.html">Student Registration</a></li>
+	<li><a href="academic-login.html">Log In</a></li>
+	<li><a href="academic-co.html">Co_Curricular</a></li>
+     </ul> 
+     </li>
+      <li class="last"><a href="placement.html">Placements</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper col3">
+  <div id="breadcrumb">
+    <ul>
+      <li class="first">You Are Here</li>
+      <li>&#187;</li>
+      <li><a href="#">Home</a></li>
+      <li>&#187;</li>
+            <li><a href="#">Academics</a></li>
+      <li>&#187;</li>
+	<li class="current"><a href="#">Log In</a></li>
+      </ul>
+  </div>
+</div>
+       <h2>Login into your account</h2>
+        <p>Analyze your assessment performance by verifying your account anytime you like to show progress in your academics.</p>
+        <h2>Student's Login Here</h2>
+      <img src="../images/demo/35.gif" alt="" style="height:100px;width:100px">         
+	<form name="srform" onsubmit="return(validate());" action="../layout/scripts/login.php" method="post">
+          <fieldset>
+            <legend>Student's Login Form</legend>
+            <div style="width:200px">
+	<label for="StudentReg">Register No:</div>
+<div style="width:200px">
+              <input type="text" name="regno" id="regno" value="" /></div>
+            </label><br>
+            <div style="width:200px"><label for="Studentpass">Password:</div>
+              <div style="width:200px">
+<input type="password" name="studpass" id="Studpass" value="" /></div>
+            </label><br>
+  <div style="width:200px">
+          <label for="Studentremember">
+              <input class="checkbox" type="checkbox" name="Student remember" id="Studentremember" checked="checked" />
+              Remember me</label><br></div>
+            <p>
+              <div style="width:200px"><input type="submit"  value="Login" />
+              &nbsp;
+              <input type="reset" value="Reset" /></div>
+            </p>
+          </fieldset>
+        </form>
+     <div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+      <div class="footbox">
+      <h2>Connect With Us</h2>
+	with any of this following social media..
+<a href="https://www.facebook.com/login"><img src="../images/demo/facebook.gif" alt="" /></a>
+<a href="https://twitter.com/login"><img src="../images/demo/twitter.gif" alt="" /></a>
+<a href="https://www.flickr.com/login"><img src="../images/demo/flickr.gif" alt="" /> </a>
+<a href="https://www.youtube.com/channel/UCRNeXX-0F9hTpLXGRkWeJbw"><img src="../images/demo/youtube.gif" alt="" /></a>
+<a href="https://www.rss.com/login"><img src="../images/demo/rss.gif" alt="" /></a>
+    </div>
+    <div class="footbox">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="../index.html">&raquo;Home page</a></li>
+        <li><a href="pages/academic-stud.html">&raquo;Student Registration</a></li>
+        <li><a href="pages/library.html">&raquo;Library</a></li>
+        <li><a href="pages/placement.html">&raquo;Placement</a></li>
+        <li class="last"><a href="pages/contact.html">&raquo;Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footbox">
+      <h2>Locations of our college</h2>
+      <ul>
+        <li>Kaatankulathur</a></li>
+        <li>Kanyakumari</a></li>
+        <li>Trichy</a></li>
+        <li>Vadapalani</a></li>
+        <li class="last"><a href="#">Salem</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">SVA College of Engineering</a></p>
+    <p class="fl_right">By webteam of SVA College</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

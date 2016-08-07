@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVA College of Engineering</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css">
+<script>
+var images = new Array()
+images[0] = "images/demo/11.jpg";
+images[1] = "images/demo/9.jpg";
+images[2] = "images/demo/10.jpg";
+images[3]="images/demo/7.jpg";
+var timerid=setInterval("changeImage()", 3500);
+var x=0;
+function changeImage()
+{
+document.getElementById("img1").src=images[x];
+if(x<=3)
+	x++;
+else
+	x=0;
+}
+</script>
+</head>
+<body>
+<div class="wrapper col0">
+  <div id="topbar">
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Counselling Code &raquo;1215</li>
+        </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+ <div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><img src="images/demo/21.jpg" style="height:70px">SVA College of Engineering</h1>
+      <p>- a Temple of Wisdom</p>
+    </div>
+    <div class="fl_right">
+      <ul>
+        <li>
+	 <form action="#" method="post" id="sitesearch">
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" src="layout/search.gif" id="search" alt="Search" height="15px"/>
+      </form> </li>
+      </ul>
+      <p>Tel: 044-22239786 | Mail: svacoe@edu.com</p>
+	<p>Fax:04-3425617</p>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col2">
+  <div id="topnav">
+    <ul>
+      <li class="active"><a href="index.html">Home</a>
+        <ul style="color:white"><br>
+	<marquee dir="right">
+	Welcome to this Prestigous Institution of wisdom..
+	</marquee>
+        </ul>
+      </li>
+	<li><a href="pages/About-welcome.html">About Us</a>
+        <ul>
+          <li><a href="About-welcome.html">Welcome greetings</a></li>
+          <li><a href="About.html">About SAV</a></li>
+          <li class="last"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </li>
+      <li><a href="pages/Departments-it.html">Departments</a>
+	<ul class="ul1">
+          <li><a href="pages/Departments-it.html">IT</a></li>
+          <li><a href="pages/Departments-csc.html">CSC</a></li>
+	<li><a href="pages/Departments-ece.html">ECE</a></li>
+	<li><a href="pages/Departments-civil.html">CIVIL</a></li>
+	<li class="last"><a href="pages/Departments-mech.html">Mechanical</a></li>
+          </ul>
+         </li>
+ <li><a href="pages/academic-co.html">Academic</a>
+</li>
+      <li class="last"><a href="pages/placement-profile.html">Placements</a>
+	<ul>
+	<li><a href="pages/placement.html">Profile</a></li>	
+	<li><a href="pages/placement-intern.html">Internships</a></li>
+	<li><a href="pages/placement-req.html">Internships</a></li>
+</ul>
+</li>     
+  </ul>
+  </div>
+</div>
+<div class="wrapper col3">
+  <div id="featured_slide">
+    <div id="featured_wrap">
+      <ul id="featured_tabs">
+        <li><a href="#fc1">Convocation Day 2016<br />
+          <span>Presided over by the President of India.</span></a></li>
+        <li><a href="#fc2">INB 2016<br />
+          <span>A national level Basketball event.</span></a></li>
+        <li><a href="#fc3">NSS Camp organized by students<br />
+          <span>Guided by Prof. Selva Kumar</span></a></li>
+        <li class="last"><a href="#fc4"> Simulatic Robotics Event<br />
+          <span>A national level event for the students of mechatronics.</span></a></li>
+      </ul>
+      <div id="featured_content">
+        <div class="featured_box" id="fc1"><img id="img1"src="images/demo/7.jpg" alt="" />
+          <div class="floater" style="color:white">slides of honour</div>
+        </div>
+        <div class="featured_box" id="fc2"><img id="img2"src="images/demo/11.jpg" alt="" />
+          <div class="floater" style="color:white">2nd slide</div>
+        </div>
+        <div class="featured_box" id="fc3"><img id="img3" src="images/demo/9.jpg" alt="" />
+          <div class="floater" style="color:white">3rd slide</div>
+        </div>
+        <div class="featured_box" id="fc4"><img id="img4"src="images/demo/10.jpg" alt="" />
+          <div class="floater" style="color:white">4th slide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper col4">
+  <div id="container">
+    <div id="hpage">
+      <ul>
+        <li>
+          <h2>Transport</h2>
+          <div class="imgholder"><img src="images/demo/16.jpg" style="height:140px;width:200px" alt="" /></div>
+          <p>A full fledged Transport department functions in the college with buses to provide transport facility to students and staff from various places. This service is offered ensuring a hassle-free and safe transportation</p>
+          <p class="readmore"><a href="pages/transport.html">Continue Reading &raquo;</a></p>
+        </li>
+        <li>
+          <h2>Sports Ground</h2>
+          <div class="imgholder"><img src="images/demo/17.jpg" style="height:140px;width:200px" alt="" /></div>
+          <p>Sports play an important role in shaping up the personality and fitness of a person and to give a truly global experience to all the students living in SVA Campus, a sports environment matching global standards is provided to them at the campus.</p>
+          <p class="readmore"><a href="pages/sports.html">Continue Reading &raquo;</a></p>
+        </li>
+        <li>
+          <h2>Computer Centre</h2>
+          <div class="imgholder"><img src="images/demo/18.jpg" style="height:140px;width:200px" alt="" /></a></div>
+          <p>Central Computing Centre (CCC) is a central facility, established in SVA College of Engineering which caters to the needs of academic departments and various sections of the institute.</p>
+          <p class="readmore"><a href="pages/computercentre.html">Continue Reading &raquo;</a></p>
+        </li>
+        <li class="last">
+          <h2>Library</h2>
+          <div class="imgholder"><img src="images/demo/19.jpg"style="height:140px;width:200px" alt="" /></div>
+          <p>The College library is located in a spacious new building of 9000 Sq. ft. The library is open to students and staff members from 7.30 a.m. to 7.30 p.m. on all working days.</p>
+          <p class="readmore"><a href="pages/library.html">Continue Reading &raquo;</a></p>
+        </li>
+      </ul>
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+<div class="wrapper col5">
+  <div id="footer">
+    <div id="newsletter">
+      <h2>Stay In The Know !</h2>
+      <p>Please enter your email to join our mailing list</p>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>News Letter</legend>
+          <input type="text" value="Enter Email Here&hellip;"  onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+          <input type="submit" name="news_go" id="news_go" value="GO" />
+        </fieldset>
+      </form>
+      <p>To unsubscribe please <a href="#">click here &raquo;</a></p>
+    </div>
+    <div class="footbox">
+      <h2>Connect With Us</h2>
+	with any of this following social media..
+<a href="https://www.facebook.com/login"><img src="images/demo/facebook.gif" alt="" /></a>
+<a href="https://twitter.com/login"><img src="images/demo/twitter.gif" alt="" /></a>
+<a href="https://www.flickr.com/login"><img src="images/demo/flickr.gif" alt="" /> </a>
+<a href="https://www.youtube.com/channel/UCRNeXX-0F9hTpLXGRkWeJbw"><img src="images/demo/youtube.gif" alt="" /></a>
+<a href="https://www.rss.com/login"><img src="images/demo/rss.gif" alt="" /></a>
+    </div>
+    <div class="footbox">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="index.html">&raquo;Home page</a></li>
+        <li><a href="pages/academic-stud.html">&raquo;Student Registration</a></li>
+        <li><a href="pages/library.html">&raquo;Library</a></li>
+        <li><a href="pages/placement.html">&raquo;Placement</a></li>
+        <li class="last"><a href="pages/contact.html">&raquo;Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footbox">
+      <h2>Locations of our college</h2>
+      <ul>
+        <li>Kaatankulathur</a></li>
+        <li>Kanyakumari</a></li>
+        <li>Trichy</a></li>
+        <li>Vadapalani</a></li>
+        <li class="last"><a href="#">Salem</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<div class="wrapper col6">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">SVA College of Engineering</a></p>
+    <p class="fl_right">By webteam of SVA College</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
